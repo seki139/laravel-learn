@@ -89,19 +89,19 @@ docker-compose -f docker-compose.practice.yml exec laravel bash
 
 - Database: `laravel_db`
 - Username: `laravel_user`
-- Password: `laravel_password`
+- Password: set in `.env` or `.env.example`
 - Host: `mysql` (from within containers) or `localhost:3307` (from host)
 
 ### Environment Variables
 
-The application uses the following key environment variables (configured in `backend/.env`):
+The application uses the following key environment variables (configured in `backend/.env` or `.env.example`):
 
 - `DB_CONNECTION=mysql`
 - `DB_HOST=mysql`
 - `DB_PORT=3306`
 - `DB_DATABASE=laravel_db`
 - `DB_USERNAME=laravel_user`
-- `DB_PASSWORD=laravel_password`
+- `DB_PASSWORD=your_database_password`
 - `FRONTEND_URL=http://localhost:3001`
 ## Practice Environment Notes
 

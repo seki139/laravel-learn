@@ -19,6 +19,8 @@ yarn-error.log*
 # Docker Compose
 docker-compose.override.yml
 **/*.env
+!.env.example
+!backend/.env.example
 
 # Laravel IDE helper
 /_ide_helper.php
