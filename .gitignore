@@ -1,0 +1,43 @@
+# Laravel
+/vendor
+/node_modules
+/public/storage
+/storage/*.key
+/.env
+/.env.*
+Homestead.yaml
+Homestead.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/pnpm-debug.log*
+/.phpunit.result.cache
+/.idea
+/.vscode
+/.DS_Store
+
+# Docker Compose
+docker-compose.override.yml
+**/*.env
+
+# Laravel IDE helper
+/_ide_helper.php
+/_ide_helper_models.php
+
+# PHPStorm / IntelliJ
+/.idea
+
+# React
+/frontend/build
+/frontend/.env.local
+/frontend/.env.development.local
+/frontend/.env.test.local
+/frontend/.env.production.local
+/frontend/node_modules
+
+# Logs
+/logs
+/**/*.log
+
+# Composer
+/backend/vendor
