@@ -5,6 +5,10 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import TodoList from "./components/ToDoList";
+import Edit from "./components/UserEdit";
+import UserDelete from "./components/UserDelete";
+import UserEdit from './components/UserEdit';
+
 
 function App() {
   // 🔑 ログイン状態
@@ -17,7 +21,13 @@ function App() {
         <Link to="/">ホーム</Link> |{" "}
         {!isLoggedIn && <Link to="/login">ログイン</Link>} |{" "}
         {!isLoggedIn && <Link to="/register">新規登録</Link>} |{" "}
-        {isLoggedIn && <Link to="/todo">Todo</Link>}
+        {isLoggedIn && <Link to="/todo">todo</Link>}
+        {/*
+        {isLoggedIn && <Link to="/edit">edit</Link>}
+        {isLoggedIn && <Link to="/delete">delete</Link>}
+        */}
+
+
       </nav>
 
       {/* 状態表示 */}
@@ -43,6 +53,24 @@ function App() {
             isLoggedIn ? <TodoList /> : <h2>ログインしてください</h2>
           }
         />
+        
+        {/* UserEdit（ログイン必須） */}
+        {/*
+        <Route
+          path="/todo"
+          element={
+            isLoggedIn ? <UserEdit /> : <h2>ログインしてください</h2>
+          }
+        />*/}
+        {/* UserDelete（ログイン必須） */}
+        {/*}
+        <Route
+          path="/delete"
+          element={
+            isLoggedIn ? <UserDelete /> : <h2>ログインしてください</h2>
+          }
+        />*/}
+        
       </Routes>
     </Router>
   );

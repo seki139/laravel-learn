@@ -18,6 +18,9 @@ function Register() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          'Accept': 'application/json',
+        'Content-Type': 'application/json',
+
         },
         body: JSON.stringify({
           name,
@@ -62,6 +65,7 @@ function Register() {
             placeholder="名前"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            autoComplete="name"
           />
         </div>
 
@@ -70,6 +74,7 @@ function Register() {
             placeholder="メール"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            autoComplete="email"
           />
         </div>
 
@@ -79,6 +84,7 @@ function Register() {
             placeholder="パスワード"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            autoComplete="new-password"
           />
         </div>
 

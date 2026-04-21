@@ -11,6 +11,8 @@ function UserEdit({ user, setUser }) {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({ name }),
     });

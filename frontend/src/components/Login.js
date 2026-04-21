@@ -13,6 +13,10 @@ function Login({ setIsLoggedIn }) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+
       },
       body: JSON.stringify({ email, password }),
     });
@@ -36,12 +40,14 @@ function Login({ setIsLoggedIn }) {
         placeholder="メールアドレス"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
+        autoComplete="email"
       />
       <input
         type="password"
         placeholder="パスワード"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
+        autoComplete="current-password"
       />
       {error && <p style={{ color: "red" }}>{error}</p>}
       <button type="submit">ログイン</button>
